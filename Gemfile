@@ -60,3 +60,4 @@ gem "erb2haml"
 gem "simple_form"
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+gem 'faker'
