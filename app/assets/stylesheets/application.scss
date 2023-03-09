@@ -15,3 +15,6 @@
  */
  @import "./actiontext.scss";
  @import "bootstrap";
+
+ .form-control.is-invalid{ background-image: none; }
+ .form-control.is-valid{ background-image: none; }
