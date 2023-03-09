@@ -22,6 +22,10 @@ class Course < ApplicationRecord
       LEVELS.map { |level| [level, level] }
     end
 
+    include PublicActivity::Model
+    tracked owner: Proc.new{ |controller, model| controller.current_user }
+  
+
     def self.ransackable_attributes(auth_object = nil)
       ["created_at", "description", "id", "language", "level", "price", "short_description", "slug", "title", "updated_at", "user_id"]
     end
