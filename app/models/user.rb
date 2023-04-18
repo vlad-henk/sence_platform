@@ -3,13 +3,20 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :omniauthable
   devise :database_authenticatable, :registerable,  :trackable,
-         :recoverable, :rememberable, :validatable, :confirmable
+         :recoverable, :rememberable, :validatable
   validate :must_have_a_role, on: :update
   
   rolify
   
   def to_s
     email
+  end
+
+  extend FriendlyId
+  friendly_id :email, use: :slugged
+
+  def should_generate_new_friendly_id?
+    email_changed?
   end
 
   after_create :assign_default_role
