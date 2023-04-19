@@ -68,3 +68,4 @@ gem 'public_activity'
 gem "figaro"
 gem "rolify"
 gem "pundit"
+gem 'exception_notification'
