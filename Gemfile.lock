@@ -162,6 +162,7 @@ GEM
     nokogiri (1.14.2-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pagy (6.0.3)
     pg (1.4.6)
     popper_js (1.16.1)
     public_activity (2.0.2)
@@ -303,6 +304,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
+  pagy
   pg (~> 1.1)
   public_activity
   puma (~> 5.0)
