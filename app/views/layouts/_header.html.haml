@@ -29,20 +29,14 @@
             .fa.fa-lock-open
             Enrollments
 
-      /SEARCH IN NAVBAR
-      = search_form_for @ransack_courses, as: :courses_search, url: courses_path do |f|
-        .input-group
-          = f.search_field :title_cont, class: 'form-control-sm', style: 'float: left; width: 150px; ', placeholder: 'Find a course', :autocomplete => :off
-          %span.input-group-append
-            %button.btn.btn-primary.btn-sm{:type => "submit"}
-              %span.fa.fa-search{"aria-hidden" => "true"}
-      /.form-inline.my-2.my-lg-0
-      /  = form_tag(courses_path, method: :get) do
-      /    .input-group
-      /      = text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "Find a course", class: 'form-control-sm'
-      /      %span.input-group-append
-      /        %button.btn.btn-primary.btn-sm{:type => "submit"}
-      /          %span.fa.fa-search{"aria-hidden" => "true"}
+      .form-inline.my-2.my-lg-0
+        /SEARCH IN NAVBAR
+        = search_form_for @ransack_courses, as: :courses_search, url: courses_path do |f|
+          .input-group
+            = f.search_field :title_cont, class: 'form-control-sm', style: 'float: left; width: 150px; ', placeholder: 'Find a course'
+            %span.input-group-append
+              %button.btn.btn-primary.btn-sm{:type => "submit"}
+                %span.fa.fa-search{"aria-hidden" => "true"}
       %ul.navbar-nav.mr-right
         %li.nav-item{class: "#{'active font-weight-bold' if current_page?(home_activity_path)}"}
           = link_to home_activity_path, class: 'nav-link' do
@@ -52,6 +46,9 @@
           %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
             %b= current_user.username
           .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdown"}
+            = link_to user_path(current_user), class: "dropdown-item" do
+              .fa.fa-user
+              %b My profile
             = link_to edit_user_registration_path, class: "dropdown-item" do
               .fa.fa-cog
               %b Account settings
