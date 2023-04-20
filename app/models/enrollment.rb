@@ -18,6 +18,16 @@ class Enrollment < ApplicationRecord
     user.to_s + " " + course.to_s
   end
 
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["course_id", "created_at", "id", "price", "rating", "review", "slug", "updated_at", "user_id"]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    ["course", "user"]
+  end
+
+  
   protected
   def cant_subscribe_to_own_course
     if self.new_record?
