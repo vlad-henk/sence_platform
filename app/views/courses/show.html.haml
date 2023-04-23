@@ -6,7 +6,6 @@
 = link_to 'Courses', courses_path
 \/
 = link_to course_path(@course) do
-  .fa.fa-graduation-cap
   = @course.title
 
 .row
@@ -38,7 +37,8 @@
         = number_to_percentage(@course.progress(current_user), precision: 0)
     %ul.list-group
       - @lessons.each do |lesson|
-        = render 'lessons/lesson_preview', lesson: lesson
+        %li.list-group-item
+          = render 'lessons/lesson_preview', lesson: lesson
     %p
 
     %h4
@@ -46,7 +46,6 @@
       = pluralize(@enrollments_with_review.count, 'review')
       -# Reviews:
       -# = @enrollments_with_review.count
-
     - @enrollments_with_review.each do |enrollment|
       = render 'enrollments/enrollment', enrollment: enrollment
       %p
