@@ -124,6 +124,7 @@ ActiveRecord::Schema.define(version: 2023_04_24_075516) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "slug"
+    t.integer "row_order"
     t.index ["course_id"], name: "index_lessons_on_course_id"
     t.index ["slug"], name: "index_lessons_on_slug", unique: true
   end
