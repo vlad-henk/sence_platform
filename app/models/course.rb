@@ -16,7 +16,7 @@ class Course < ApplicationRecord
   scope :unpublished, -> { where(published: false) }
   scope :approved, -> { where(approved: true) }
   scope :unapproved, -> { where(approved: false) }
-  
+
   def to_s
     title
   end
@@ -38,7 +38,7 @@ class Course < ApplicationRecord
   end
 
   def self.levels
-    ["Beginner", "Intermediate", "Advanced"]
+    ["All levels", "Beginner", "Intermediate", "Advanced"]
   end
 
   def self.ransackable_attributes(auth_object = nil)
