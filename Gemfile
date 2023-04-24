@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.7', '>= 6.1.7.2'
+gem 'rails', '~> 6.1.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
@@ -20,13 +20,55 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+
+# add icons for styling
+gem "font-awesome-sass", "~> 6.3.0"
+
+# check codestyle
+gem 'rubocop', require: false
+
+# to convert erb to haml
+gem "haml-rails", "~> 2.0"
+gem 'html2haml'
+
+# gem for forms
+gem 'simple_form'
+
+gem 'bootstrap', '~> 4.4.1'
+# for bootstrap to work
+gem 'jquery-rails'
+
+# gem for fake data
+gem 'faker'
+
+gem 'devise'
+
+gem 'friendly_id', '~> 5.4.0'
+
+gem "figaro"
+# filter and sort data
+gem 'ransack'
+# see all activity in the app
+gem 'public_activity'
+# give users roles
+gem "rolify"
+# authorization
+gem "pundit"
+# notify if errors in production
+gem 'exception_notification', group: :production
+# pagination
+gem 'pagy'
+# charts
+gem "chartkick"
+# group records by day/week/year
+gem 'groupdate'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -42,34 +84,17 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
   gem 'rails-erd'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
-  gem 'selenium-webdriver', '>= 4.0.0.rc1'
+  gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem "haml-rails", "~> 2.0"
-gem "erb2haml"
-gem "simple_form"
-gem 'bootstrap', '~> 4.4.1'
-gem 'jquery-rails'
-gem 'faker'
-gem 'devise'
-gem 'friendly_id'
-gem 'ransack'
-gem 'public_activity'
-gem "figaro"
-gem "rolify"
-gem "pundit"
-gem 'exception_notification', group: :production
-gem 'pagy'
-gem 'chartkick'
-gem 'groupdate'
