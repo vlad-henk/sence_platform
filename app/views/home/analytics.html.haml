@@ -4,6 +4,12 @@
 /= line_chart @users.group_by_day(:created_at).count
 = line_chart charts_users_per_day_path
 
+- content_for :title do
+  Corsego 
+  \| 
+  Analytics
+
+
 %h4.text-center
   New enrollments per day
 /= column_chart @enrollments.group_by_day(:created_at).count
