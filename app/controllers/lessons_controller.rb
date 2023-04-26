@@ -37,6 +37,7 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new(lesson_params)
     @course = Course.friendly.find(params[:course_id])
     @lesson.course_id = @course.id
+    authorize @lesson
     respond_to do |format|
       if @lesson.save
         format.html { redirect_to course_lesson_path(@course, @lesson), notice: "Lesson was successfully created." }
@@ -82,6 +83,6 @@ class LessonsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def lesson_params
-      params.require(:lesson).permit(:title, :content, :course_id, :row_order_position)
+      params.require(:lesson).permit(:title, :content, :course_id, :row_order_position, :video, :video_thumbnail)
     end
 end
