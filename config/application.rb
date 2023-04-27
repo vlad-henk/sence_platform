@@ -17,9 +17,10 @@ module SencePlatform
       ActionText::ContentHelper.allowed_attributes.add 'controls'
 
       ActionText::ContentHelper.allowed_tags.add 'video'
+      ActionText::ContentHelper.allowed_tags.add 'audio'
       ActionText::ContentHelper.allowed_tags.add 'source'
     end
-    
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
