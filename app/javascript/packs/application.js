@@ -7,23 +7,28 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import "@fortawesome/fontawesome-free/css/all"
+import 'bootstrap'
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-require('stylesheets/application.scss')
+// import 'bootstrap/dist/js/bootstrap'
+// import 'bootstrap/dist/css/bootstrap'
+
+
+import "@fortawesome/fontawesome-free/css/all"
+
 require("trix")
 require("@rails/actiontext")
 
 import "chartkick/chart.js"
 
 import "../trix-editor-overrides"
-import "youtube"
 
-require("jquery") // yarn add jquery
-require("jquery-ui-dist/jquery-ui"); // yarn add jquery-ui-dist 
+require("jquery-ui-dist/jquery-ui");
+
+import "youtube"
 
 $(document).on('turbolinks:load', function(){
   $('.lesson-sortable').sortable({
@@ -46,4 +51,9 @@ $(document).on('turbolinks:load', function(){
       console.log("stop called when finishing sort of cards");
     }
   });
+
+  $("video").bind("contextmenu",function(){
+    return false;
+  });
+
 });
