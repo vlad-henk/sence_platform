@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       patch :unapprove
     end
     resources :lessons do
+      resources :comments, except: [:index]
       put :sort
       member do
         delete :delete_video
@@ -27,7 +28,7 @@ Rails.application.routes.draw do
     resources :enrollments, only: [:new, :create]
   end
   resources :youtube, only: :show
-  
+
   resources :users, only: [:index, :edit, :show, :update]
 
   namespace :charts do
