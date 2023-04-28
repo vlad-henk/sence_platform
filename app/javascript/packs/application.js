@@ -20,6 +20,7 @@ require("@rails/actiontext")
 import "chartkick/chart.js"
 
 import "../trix-editor-overrides"
+import "youtube"
 
 require("jquery") // yarn add jquery
 require("jquery-ui-dist/jquery-ui"); // yarn add jquery-ui-dist 

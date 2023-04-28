@@ -26,7 +26,8 @@ Rails.application.routes.draw do
     end
     resources :enrollments, only: [:new, :create]
   end
-
+  resources :youtube, only: :show
+  
   resources :users, only: [:index, :edit, :show, :update]
 
   namespace :charts do
