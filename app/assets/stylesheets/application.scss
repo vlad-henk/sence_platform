@@ -13,29 +13,21 @@
  *= require_tree .
  *= require_self
  */
-
-@import "font-awesome";
-@import './actiontext.scss';
-@import "bootstrap/scss/bootstrap";
-
-// body { background: #ffffff; color: #ebedf0; }
-.card, .jumbotron, .list-group-item { color: #2a4054; }
-.purple-background { background-color: #563d7c; }
-.table { background: white; }
-
-.element {color: green;}
-
-//hide simple_form checkmarks
-.form-control.is-invalid{ background-image: none; }
-.form-control.is-valid{ background-image: none; }
-
-//highlight drag and drop
-.ui-state-highlight { height: 3em; line-height: 1.2em; background-color: yellow; }
-
-//no action_text attachment button
-//.trix-button-group--file-tools { display: none !important; }
-
-//simple_form input for rich_text_area
-trix-editor.form-control {
-  height: auto;
-}
+ @import "bootstrap";
+ @import "font-awesome";
+ @import './actiontext.scss';
+ 
+ //hide simple_form checkmarks
+ .form-control.is-invalid{ background-image: none; }
+ .form-control.is-valid{ background-image: none; }
+ 
+ //highlight drag and drop
+ .ui-state-highlight { height: 3em; line-height: 1.2em; background-color: yellow; }
+ 
+ //no action_text attachment button
+ //.trix-button-group--file-tools { display: none !important; }
+ 
+ //simple_form input for rich_text_area
+ trix-editor.form-control {
+   height: auto;
+ }
