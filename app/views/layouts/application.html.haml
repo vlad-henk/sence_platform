@@ -12,6 +12,7 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = render 'layouts/google_analytics'
+    = favicon_link_tag 'logo.png'
   %body
     = render 'layouts/header'
     = render 'layouts/messages'
@@ -19,5 +20,5 @@
       %p
       = yield
     %br
-    .bg-dark.text-white
+    .purple-background.text-light
       = render 'layouts/footer'
