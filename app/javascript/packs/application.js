@@ -30,6 +30,8 @@ require("jquery-ui-dist/jquery-ui");
 
 import "youtube"
 
+require("selectize")
+
 $(document).on('turbolinks:load', function(){
   $('.lesson-sortable').sortable({
     cursor: "grabbing",
@@ -56,4 +58,10 @@ $(document).on('turbolinks:load', function(){
     return false;
   });
 
+  if ($('.selectize')){
+    $('.selectize').selectize({
+        sortField: 'text'
+    });
+  }
+  
 });
