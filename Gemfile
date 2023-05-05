@@ -91,6 +91,7 @@ group :development do
   gem 'spring'
 
   gem 'rails-erd'
+  gem "letter_opener"
 end
 
 group :test do
