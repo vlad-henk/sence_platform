@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   end
   resources :youtube, only: :show
 
+  resources :course_creator
   resources :users, only: [:index, :edit, :show, :update]
 
   namespace :charts do
