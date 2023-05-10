@@ -1,0 +1,5 @@
+Rails.configuration.stripe = {
+    publishable_key: "pk_test_51N6EdCLZZGpyRqcR0rCW2tHHkONTR2CDeTiob6PCn1w3MLy3Xgc9a1mmeCVXNYIMkUMUwRxaM5Bx30V0wKD2fsDy00R0HScgDX",
+    secret_key: "sk_test_51N6EdCLZZGpyRqcR6Sxt59Et0HeC0qjuuW7iMQJWzjsBReciXOb5lxUoC9uEv5ktNmEPJX8Z5rj4OOkyQvbZjzsP00Ysi6VNie"
+  }
+  Stripe.api_key = "sk_test_51N6EdCLZZGpyRqcR6Sxt59Et0HeC0qjuuW7iMQJWzjsBReciXOb5lxUoC9uEv5ktNmEPJX8Z5rj4OOkyQvbZjzsP00Ysi6VNie"
