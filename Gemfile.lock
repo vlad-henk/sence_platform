@@ -187,6 +187,8 @@ GEM
     mini_portile2 (2.8.2)
     minitest (5.18.0)
     msgpack (1.6.1)
+    net-http (0.3.2)
+      uri
     net-imap (0.3.4)
       date
       net-protocol
@@ -334,6 +336,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
+    uri (0.10.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -391,6 +394,9 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   listen (~> 3.3)
+  net-http
+  net-imap
+  net-smtp
   pagy
   pg (~> 1.1)
   public_activity
@@ -411,6 +417,7 @@ DEPENDENCIES
   stripe
   turbolinks (~> 5)
   tzinfo-data
+  uri (= 0.10.0)
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
