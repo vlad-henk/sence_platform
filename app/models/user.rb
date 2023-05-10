@@ -5,8 +5,8 @@ class User < ApplicationRecord
   has_many :comments, dependent: :nullify
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable, :omniauthable
-  devise :database_authenticatable, :registerable,  :trackable,
-         :recoverable, :rememberable, :validatable, :confirmable
+  devise :invitable, :database_authenticatable, :registerable,  :trackable,
+         :recoverable, :rememberable, :validatable, :confirmable, :invitable
   validate :must_have_a_role, on: :update
   
   rolify
