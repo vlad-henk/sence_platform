@@ -11,6 +11,9 @@ class User < ApplicationRecord
   
   rolify
   
+  include PublicActivity::Model
+  tracked only: [:create, :destroy], owner: :itself
+
   def to_s
     email
   end
