@@ -77,6 +77,7 @@ gem 'recaptcha'
 gem 'wicked_pdf' #PDF for Ruby on Rails
 gem 'wkhtmltopdf-binary' #PDF dependancy
 gem 'wicked'
+gem "cocoon"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
