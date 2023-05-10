@@ -83,6 +83,7 @@ gem "net-http"
 gem "net-smtp"
 gem "net-imap"
 gem "uri", "0.10.0"
+gem 'sitemap_generator'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
